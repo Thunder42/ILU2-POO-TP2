@@ -18,7 +18,7 @@ public class BoundaryAfficherMarche {
 			String vendeur;
 			String quantite;
 			String produit;
-			affichagem.append(nomAcheteur + " vous trouverez au marché :");
+			affichagem.append(nomAcheteur + " vous trouverez au marché :\n");
 			for (int i = 0; i < infosMarche.length; i++) {
 				vendeur = infosMarche[i];
 				i++;
