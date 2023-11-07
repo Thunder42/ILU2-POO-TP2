@@ -20,7 +20,7 @@ public class BoundaryAcheterProduit {
 			System.out.println("Quel produit voulez-vous acheter ?");
 			String produit = scan.next();
 			String[] vendeursProduit = controlAcheterProduit.chercherVendeurs(produit);
-			if (vendeursProduit.length == 0) {
+			if (vendeursProduit == null || vendeursProduit.length == 0) {
 				System.out.println("Désolé, personne ne vend ce produit au marché.\n");
 			} else {
 				StringBuilder choixcomm = new StringBuilder(
@@ -42,7 +42,7 @@ public class BoundaryAcheterProduit {
 							achat.append(
 									nomAcheteur + " achète " + quantite + " " + produit + " à " + nomVendeur + ".\n");
 						} else {
-							achat.append(nomAcheteur + " veut acheter " + quantite + produit);
+							achat.append(nomAcheteur + " veut acheter " + quantite + " " + produit);
 							if (quantiteAchetee == 0) {
 								achat.append(", malheureusement il n'y en a plus !\n");
 							} else {
@@ -52,6 +52,8 @@ public class BoundaryAcheterProduit {
 						}
 						System.out.println(achat.toString());
 					}
+				} else {
+					System.out.println("Vous devez entrer un chiffre entre 1 et " + vendeursProduit.length);
 				}
 			}
 		}
