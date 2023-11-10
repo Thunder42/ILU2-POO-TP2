@@ -32,6 +32,7 @@ public class ControlLibererEtal {
 		Etal etal = village.rechercherEtal(gaulois);
 		donneesEtal = etal.etatEtal();
 		return donneesEtal;
+		// [4] renvoie la quantité de produit qu'il y avait au début
 	}
 
 }
